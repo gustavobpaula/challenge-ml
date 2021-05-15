@@ -1,11 +1,22 @@
 import express from 'express'
 import cors from 'cors'
-import routes from '@routes/index'
+import dotenv from 'dotenv'
+import itemsRoute from '@routes/items'
+
+dotenv.config()
+
+if (!process.env.PORT) {
+  process.exit(1)
+}
+
+const PORT = parseInt(process.env.PORT as string, 10)
 
 const app = express()
 
-app.use(express.json())
 app.use(cors())
-app.use(routes)
+app.use(express.json())
+app.use('/api', itemsRoute)
 
-app.listen(3000)
+app.listen(PORT, () => {
+  console.log(`Listening at http://localhost:${PORT}`)
+})

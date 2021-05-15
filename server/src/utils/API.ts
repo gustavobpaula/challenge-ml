@@ -4,11 +4,10 @@ import { URLSearchParams } from 'url'
 const ML_API = 'https://api.mercadolibre.com'
 
 const API = {
-  search: async (q: string) => {
+  search: async (query: string) => {
     const params = new URLSearchParams()
-    params.append('q', 'mesa')
-    params.append('limit', '4')
-    console.log(params.toString())
+    params.append('q', query)
+
     const response = await fetch(
       `${ML_API}/sites/MLA/search?${params.toString()}`
     )
