@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 
-import { APIPayload } from './APIResult'
+import API from '@utils/API'
+import { APICurrency, APIPayload } from './APIResult'
 
 export type Author = {
   name: string
@@ -27,18 +28,31 @@ export interface ItemsModel {
 }
 
 export class Items implements ItemsModel {
-  readonly author: Author
-  readonly categories: string[]
-  readonly items: Item[]
+  author: Author
+  categories: string[]
+  items: Item[]
+  private currencyId: string
 
   constructor(private payload: APIPayload) {
     this.author = { name: 'Gustavo', lastName: 'Bento de Paula' }
-    this.categories = this.getCategories()
-    this.items = this.getItems()
+    this.categories = []
+    this.items = []
+    this.currencyId = 'ARS'
+  }
+
+  async create() {
+    this.getCategories()
+    await this.getItems()
+
+    return {
+      author: this.author,
+      categories: this.categories,
+      items: this.items,
+    }
   }
 
   private getCategories() {
-    const filterCategory = this.payload?.filters.filter(
+    const filterCategory = this.payload?.filters?.filter(
       filter => filter?.id === 'category'
     )[0]
 
@@ -46,29 +60,28 @@ export class Items implements ItemsModel {
       return []
     }
 
-    const categories = filterCategory.values.map(value => value.name)
-
-    return categories
+    this.categories = filterCategory?.values?.map(value => value.name)
   }
 
-  private getItems() {
-    const items = this.payload?.results.map(result => {
-      const item: Item = {
-        id: result.id,
-        title: result.title,
-        price: {
-          currency: result.prices.presentation.display_currency,
-          decimals: result.price,
-          amount: result.price,
-        },
-        picture: result.thumbnail,
-        condition: result.condition,
-        free_shipping: result.shipping.free_shipping,
-      }
+  private async getItems() {
+    const currency: APICurrency = await API.getCurrency(this.currencyId)
 
-      return item
-    })
+    this.items =
+      this.payload?.results?.map(result => {
+        const item: Item = {
+          id: result.id,
+          title: result.title,
+          price: {
+            currency: currency.symbol,
+            decimals: currency.decimal_places,
+            amount: result.price,
+          },
+          picture: result.thumbnail,
+          condition: result.condition,
+          free_shipping: result.shipping?.free_shipping,
+        }
 
-    return items
+        return item
+      }) || []
   }
 }

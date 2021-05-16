@@ -10,11 +10,7 @@ export type APIResult = {
   id: string
   title: string
   price: number
-  prices: {
-    presentation: {
-      display_currency: string
-    }
-  }
+  currency_id: string
   thumbnail: string
   condition: string
   shipping: {
@@ -25,4 +21,11 @@ export type APIResult = {
 export type APIPayload = {
   filters: APIFilter[]
   results: APIResult[]
+}
+
+export type APICurrency = {
+  id: string
+  symbol: string
+  description: string
+  decimal_places: number
 }

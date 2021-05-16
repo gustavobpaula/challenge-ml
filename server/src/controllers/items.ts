@@ -15,7 +15,8 @@ const getItems = async (req: Request, res: Response) => {
     return res.status(404).json({ error: payload?.message })
   }
 
-  const { author, categories, items } = new Items(payload)
+  const itemsInstance = new Items(payload)
+  const { author, categories, items } = await itemsInstance.create()
 
   res.json({ author, categories, items })
 }
