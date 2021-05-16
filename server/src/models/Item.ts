@@ -30,11 +30,24 @@ export interface ItemModel {
   item: ItemProps
 }
 
+/**
+ * Class representing a Item.
+ *
+ * @export
+ * @class Item
+ * @implements {ItemModel}
+ */
 export class Item implements ItemModel {
   item!: ItemProps
   author: AuthorProps
   private currencyId: string
 
+  /**
+   *Creates an instance of Item.
+   * @param {APIItemPayloadProps} payloadItem - Object of item returned by the ML API
+   * @param {APIItemDescriptionPayloadProps} payloadItemDescription - Object of item description returned by the ML API
+   * @memberof Item
+   */
   constructor(
     private payloadItem: APIItemPayloadProps,
     private payloadItemDescription: APIItemDescriptionPayloadProps
@@ -43,6 +56,12 @@ export class Item implements ItemModel {
     this.currencyId = 'ARS'
   }
 
+  /**
+   * Create a parsed full object
+   *
+   * @returns
+   * @memberof Item
+   */
   async create() {
     await this.getItem()
 
@@ -52,6 +71,12 @@ export class Item implements ItemModel {
     }
   }
 
+  /**
+   * Parse property item
+   *
+   * @private
+   * @memberof Item
+   */
   private async getItem() {
     const currency: APICurrencyProps = await API.getCurrency(this.currencyId)
 

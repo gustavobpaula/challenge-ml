@@ -3,6 +3,13 @@ import API from '@utils/API'
 import { Items } from '@models/Items'
 import { Item } from '@models/Item'
 
+/**
+ * Implements Items response
+ *
+ * @param req
+ * @param res
+ * @returns
+ */
 const getItems = async (req: Request, res: Response) => {
   const query = req.query.q
 
@@ -22,6 +29,13 @@ const getItems = async (req: Request, res: Response) => {
   res.json({ author, categories, items })
 }
 
+/**
+ * Implements Item response
+ *
+ * @param req
+ * @param res
+ * @returns
+ */
 const getItem = async (req: Request, res: Response) => {
   const id = req.params.id
 

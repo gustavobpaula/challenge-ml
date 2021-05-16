@@ -8,12 +8,24 @@ export interface ItemsModel {
   items: ItemProps[]
 }
 
+/**
+ * Class representing a Items.
+ *
+ * @export
+ * @class Items
+ * @implements {ItemsModel}
+ */
 export class Items implements ItemsModel {
   author: AuthorProps
   categories: string[]
   items: ItemProps[]
   private currencyId: string
 
+  /**
+   *Creates an instance of Items.
+   * @param {APISearchPayloadProps} payload - Object of items returned by the ML API
+   * @memberof Items
+   */
   constructor(private payload: APISearchPayloadProps) {
     this.author = { name: 'Gustavo', lastName: 'Bento de Paula' }
     this.categories = []
@@ -21,6 +33,12 @@ export class Items implements ItemsModel {
     this.currencyId = 'ARS'
   }
 
+  /**
+   * Create a parsed full object
+   *
+   * @returns
+   * @memberof Items
+   */
   async create() {
     this.getCategories()
     await this.getItems()
@@ -32,6 +50,13 @@ export class Items implements ItemsModel {
     }
   }
 
+  /**
+   * Parse property categories
+   *
+   * @private
+   * @returns
+   * @memberof Items
+   */
   private getCategories() {
     const filterCategory = this.payload?.filters?.filter(
       filter => filter?.id === 'category'
@@ -44,6 +69,12 @@ export class Items implements ItemsModel {
     this.categories = filterCategory?.values?.map(value => value.name)
   }
 
+  /**
+   * Parse property items
+   *
+   * @private
+   * @memberof Items
+   */
   private async getItems() {
     const currency: APICurrencyProps = await API.getCurrency(this.currencyId)
 
