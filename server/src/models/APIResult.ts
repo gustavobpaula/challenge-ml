@@ -1,4 +1,4 @@
-export type APIFilter = {
+export type APIFilterProps = {
   id: string
   name: string
   values: Array<{
@@ -6,11 +6,10 @@ export type APIFilter = {
   }>
 }
 
-export type APIResult = {
+export type APIItemPayloadProps = {
   id: string
   title: string
   price: number
-  currency_id: string
   thumbnail: string
   condition: string
   shipping: {
@@ -18,12 +17,20 @@ export type APIResult = {
   }
 }
 
-export type APIPayload = {
-  filters: APIFilter[]
-  results: APIResult[]
+export type APIResultProps = APIItemPayloadProps & {
+  currency_id: string
 }
 
-export type APICurrency = {
+export type APISearchPayloadProps = {
+  filters: APIFilterProps[]
+  results: APIResultProps[]
+}
+
+export type APIItemDescriptionPayloadProps = {
+  plain_text: string
+}
+
+export type APICurrencyProps = {
   id: string
   symbol: string
   description: string

@@ -1,39 +1,20 @@
-/* eslint-disable camelcase */
-
 import API from '@utils/API'
-import { APICurrency, APIPayload } from './APIResult'
-
-export type Author = {
-  name: string
-  lastName: string
-}
-
-export type Item = {
-  id: string
-  title: string
-  price: {
-    currency: string
-    amount: number
-    decimals: number
-  }
-  picture: string
-  condition: string
-  free_shipping: boolean
-}
+import { APICurrencyProps, APISearchPayloadProps } from './APIResult'
+import { AuthorProps, ItemProps } from '@models/Item'
 
 export interface ItemsModel {
-  author: Author
+  author: AuthorProps
   categories: string[]
-  items: Item[]
+  items: ItemProps[]
 }
 
 export class Items implements ItemsModel {
-  author: Author
+  author: AuthorProps
   categories: string[]
-  items: Item[]
+  items: ItemProps[]
   private currencyId: string
 
-  constructor(private payload: APIPayload) {
+  constructor(private payload: APISearchPayloadProps) {
     this.author = { name: 'Gustavo', lastName: 'Bento de Paula' }
     this.categories = []
     this.items = []
@@ -64,11 +45,11 @@ export class Items implements ItemsModel {
   }
 
   private async getItems() {
-    const currency: APICurrency = await API.getCurrency(this.currencyId)
+    const currency: APICurrencyProps = await API.getCurrency(this.currencyId)
 
     this.items =
       this.payload?.results?.map(result => {
-        const item: Item = {
+        const item: ItemProps = {
           id: result.id,
           title: result.title,
           price: {
