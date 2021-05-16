@@ -15,6 +15,7 @@ const API = {
       throw new Error(error)
     }
   },
+
   /**
    * Return items by query
    */
@@ -27,6 +28,30 @@ const API = {
         `${ML_API}/sites/MLA/search?${params.toString()}`
       )
 
+      return await response.json()
+    } catch (error) {
+      throw new Error(error)
+    }
+  },
+
+  /**
+   * Return item by id
+   */
+  item: async (id: string) => {
+    try {
+      const response = await fetch(`${ML_API}/items/${id}`)
+      return await response.json()
+    } catch (error) {
+      throw new Error(error)
+    }
+  },
+
+  /**
+   * Return item description by id
+   */
+  itemDescription: async (id: string) => {
+    try {
+      const response = await fetch(`${ML_API}/items/${id}/description`)
       return await response.json()
     } catch (error) {
       throw new Error(error)
