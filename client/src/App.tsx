@@ -2,9 +2,9 @@ import React, { Suspense } from 'react'
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-const Home = React.lazy(() => import('./pages/Home'))
-const Search = React.lazy(() => import('./pages/Search'))
-const Product = React.lazy(() => import('./pages/Product'))
+const Home = React.lazy(() => import('pages/Home'))
+const Search = React.lazy(() => import('pages/Search'))
+const Product = React.lazy(() => import('pages/Product'))
 
 function App() {
   return (
