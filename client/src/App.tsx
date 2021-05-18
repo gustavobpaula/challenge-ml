@@ -1,30 +1,26 @@
-import React, { Suspense } from 'react'
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { Suspense } from 'react'
+import { BrowserRouter as Router, Switch } from 'react-router-dom'
+import { jsx, ThemeProvider, Global } from '@emotion/react'
+import theme from 'config/theme'
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Routes from './Routes'
 
-const Home = React.lazy(() => import('pages/Home'))
-const Search = React.lazy(() => import('pages/Search'))
-const Product = React.lazy(() => import('pages/Product'))
+import globalStyles from 'config/global.styles'
 
 function App() {
   return (
-    <Router>
-      <Suspense fallback={<div>...loading</div>}>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-
-          <Route exact path="/items">
-            <Search />
-          </Route>
-
-          <Route path="/items/:id">
-            <Product />
-          </Route>
-        </Switch>
-      </Suspense>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Global styles={globalStyles} />
+        <Suspense fallback={<div>...loading</div>}>
+          <Switch>
+            <Routes />
+          </Switch>
+        </Suspense>
+      </Router>
+    </ThemeProvider>
   )
 }
 
