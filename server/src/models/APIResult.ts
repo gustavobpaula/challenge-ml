@@ -2,7 +2,7 @@ export type APIFilterProps = {
   id: string
   name: string
   values: Array<{
-    name: string
+    path_from_root: Array<{ name: string }>
   }>
 }
 

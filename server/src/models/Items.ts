@@ -66,7 +66,8 @@ export class Items implements ItemsModel {
       return []
     }
 
-    this.categories = filterCategory?.values?.map(value => value.name)
+    const firstCategory = filterCategory?.values?.[0]
+    this.categories = firstCategory?.path_from_root.map(value => value.name)
   }
 
   /**

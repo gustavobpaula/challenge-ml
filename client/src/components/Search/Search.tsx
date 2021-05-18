@@ -4,14 +4,15 @@ import { useSearch } from './Search.hook'
 import * as S from './Search.style'
 
 function Search() {
-  const { handleChange, handleSubmit, query } = useSearch()
+  const { handleChange, handleSubmit, inputValue } = useSearch()
+
   return (
     <S.Form onSubmit={handleSubmit}>
       <S.Input
         type="text"
         name="query"
         placeholder="Nunca dejes de buscar"
-        value={query}
+        value={inputValue}
         onChange={handleChange}
       />
       <S.Button type="submit">

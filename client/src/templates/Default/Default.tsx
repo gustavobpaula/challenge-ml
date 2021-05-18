@@ -3,7 +3,7 @@ import { Header } from 'components'
 import * as S from './Default.style'
 
 type DefaultProps = {
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 function Default({ children }: DefaultProps) {

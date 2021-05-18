@@ -1,11 +1,7 @@
 import { Default as Template } from 'templates'
 
 function Home() {
-  return (
-    <Template>
-      <div>Home</div>
-    </Template>
-  )
+  return <Template />
 }
 
 export default Home
