@@ -6,6 +6,7 @@ const theme = {
     gray3: '#999999',
     gray4: '#eeeeee',
     blue: '#3483fa',
+    blank: '#ffffff',
   },
   spacings: {
     rule1: '16px',

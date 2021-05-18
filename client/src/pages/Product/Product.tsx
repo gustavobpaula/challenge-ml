@@ -1,5 +1,11 @@
+import { Default as Template } from 'templates'
+
 function Product() {
-  return <div>Product</div>
+  return (
+    <Template>
+      <div>Product</div>
+    </Template>
+  )
 }
 
 export default Product

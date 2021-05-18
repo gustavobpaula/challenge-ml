@@ -1,12 +1,10 @@
-import { Header } from 'components'
+import { Default as Template } from 'templates'
 
 function Home() {
   return (
-    <>
-      <Header />
-      <header> Teste</header>
+    <Template>
       <div>Home</div>
-    </>
+    </Template>
   )
 }
 

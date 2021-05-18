@@ -1,5 +1,11 @@
+import { Default as Template } from 'templates'
+
 function Search() {
-  return <div>Search</div>
+  return (
+    <Template>
+      <div>Search</div>
+    </Template>
+  )
 }
 
 export default Search
