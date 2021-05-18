@@ -2,7 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 
 const Home = React.lazy(() => import('pages/Home'))
-const Search = React.lazy(() => import('pages/Search'))
+const SearchResult = React.lazy(() => import('pages/SearchResult'))
 const Product = React.lazy(() => import('pages/Product'))
 
 function Routes() {
@@ -13,7 +13,7 @@ function Routes() {
       </Route>
 
       <Route exact path="/items">
-        <Search />
+        <SearchResult />
       </Route>
 
       <Route path="/items/:id">
