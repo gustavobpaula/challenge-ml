@@ -2,7 +2,6 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 
 export const Container = styled.section`
-  background-color: ${({ theme }) => theme.colors.yellow};
   margin: 0 auto;
   max-width: 1215px;
 
