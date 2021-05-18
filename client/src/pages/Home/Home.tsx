@@ -1,5 +1,13 @@
+import { Header } from 'components'
+
 function Home() {
-  return <div>Home</div>
+  return (
+    <>
+      <Header />
+      <header> Teste</header>
+      <div>Home</div>
+    </>
+  )
 }
 
 export default Home

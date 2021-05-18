@@ -2,18 +2,18 @@
 /** @jsx jsx */
 import { Suspense } from 'react'
 import { BrowserRouter as Router, Switch } from 'react-router-dom'
-import { jsx, ThemeProvider, Global } from '@emotion/react'
+import { jsx, ThemeProvider } from '@emotion/react'
 import theme from 'config/theme'
 
 import Routes from './Routes'
 
-import globalStyles from 'config/global.styles'
+import GlobalStyles from 'config/Global.styles'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Global styles={globalStyles} />
+        <GlobalStyles />
         <Suspense fallback={<div>...loading</div>}>
           <Switch>
             <Routes />
