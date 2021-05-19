@@ -11,6 +11,12 @@ const makeSut = () => {
 }
 
 describe('Loading component', () => {
+  it('Should render match snapshot', () => {
+    const { asFragment } = makeSut()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   it('Should render Loading', () => {
     makeSut()
 

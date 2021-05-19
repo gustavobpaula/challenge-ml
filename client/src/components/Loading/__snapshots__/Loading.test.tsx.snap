@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading component Should render match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-3vrq30"
+  >
+    <div
+      aria-hidden="false"
+      aria-label="Loading"
+      class="css-u1byhu"
+      role="alert"
+    >
+      <img
+        alt="Logo do Mercado Livre"
+        class="css-12y7jgk"
+        src="Logo_ML.png"
+      />
+      <div
+        class="css-t6y9zj"
+      />
+      <div
+        class="css-zmfjfy"
+      />
+      <div
+        class="css-27orzn"
+      />
+      <div
+        class="css-1ha8gsg"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
