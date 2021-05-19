@@ -1,12 +1,13 @@
-import { Shelf } from 'components'
+import { Shelf, EmptyResult } from 'components'
 import { Default as Template } from 'templates'
 import { useSearchResult } from './SearchResult.hook'
 
 function Search() {
-  const { items } = useSearchResult()
+  const { items, resultIsEmpty } = useSearchResult()
   return (
     <Template>
       <div>
+        {resultIsEmpty ? <EmptyResult /> : <Shelf items={items} />}
         <Shelf items={items} />
       </div>
     </Template>

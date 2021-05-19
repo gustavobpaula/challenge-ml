@@ -11,13 +11,17 @@ export const useSearchResult = () => {
   const API_HOST = process.env.REACT_APP_API_HOST
   const [searchResult, setSearchResult] =
     useState<SearchResultProps | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
 
-  const fetchData = async () => {
-    const response = await fetch(`${API_HOST}/api/items/${search}`)
-    const data = (await response.json()) as SearchResultProps
-
-    setSearchResult(data)
-    setBreadcrumbs(data?.categories || [])
+  // setIsLoading(true)
+  const fetchData = () => {
+    fetch(`${API_HOST}/api/items/${search}`)
+      .then(response => response.json())
+      .then((payload: SearchResultProps) => {
+        setSearchResult(payload)
+        setBreadcrumbs(payload?.categories || [])
+        setIsLoading(false)
+      })
   }
 
   useEffect(() => {
@@ -32,5 +36,13 @@ export const useSearchResult = () => {
     }
   }, [urlQuery, query, setQuery])
 
-  return { items: searchResult?.items }
+  return {
+    items: searchResult?.items,
+    isLoading,
+    resultIsEmpty:
+      (!searchResult ||
+        !searchResult?.items ||
+        searchResult.items.length <= 0) &&
+      !isLoading,
+  }
 }

@@ -1,5 +1,6 @@
 export * from './Breadcrumbs'
 export * from './Container'
+export * from './EmptyResult'
 export * from './Header'
 export * from './Search'
 export * from './Shelf'
