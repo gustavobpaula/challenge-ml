@@ -6,7 +6,7 @@ function Breadcrumbs() {
   const { breadcrumbs } = useBreadcrumbs()
   return (
     <Container>
-      <S.List>
+      <S.List aria-label="breadcrumbs">
         {breadcrumbs.map(breadcrumb => (
           <S.ListItem key={breadcrumb}>{breadcrumb}</S.ListItem>
         ))}
