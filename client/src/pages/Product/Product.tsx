@@ -1,4 +1,4 @@
-import { EmptyResult } from 'components'
+import { EmptyResult, Loading } from 'components'
 import { Default as Template } from 'templates'
 import { useProduct } from './Product.hook'
 
@@ -16,7 +16,7 @@ function Product() {
   }
 
   if (isLoading) {
-    return <Template>...loading</Template>
+    return <Loading />
   }
 
   return (

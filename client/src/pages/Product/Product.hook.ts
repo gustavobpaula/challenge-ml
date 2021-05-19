@@ -14,7 +14,6 @@ export const useProduct = () => {
     fetch(`${API_HOST}/api/items/${id}`)
       .then(response => response.json())
       .then(payload => {
-        console.log('payload', payload)
         setIsLoading(false)
 
         if (payload?.error) {

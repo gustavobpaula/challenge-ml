@@ -8,6 +8,7 @@ export const Content = styled.article`
   ${({ theme }) => css`
     @media (min-width: ${theme.breakpoints.forDesktopUp}) {
       flex-direction: row;
+      justify-content: space-between;
     }
   `}
 `
@@ -18,9 +19,10 @@ export const Description = styled.div`
 
 export const Price = styled.div`
   ${({ theme }) => css`
-    min-width: 300px;
     margin: ${theme.spacings.rule3};
     @media (min-width: ${theme.breakpoints.forDesktopUp}) {
+      min-width: 300px;
+      max-width: 300px;
       margin-left: 0;
     }
   `}

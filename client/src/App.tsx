@@ -8,13 +8,14 @@ import theme from 'config/theme'
 import Routes from './Routes'
 
 import GlobalStyles from 'config/Global.styles'
+import { Loading } from 'components'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
         <GlobalStyles />
-        <Suspense fallback={<div>...loading</div>}>
+        <Suspense fallback={<Loading />}>
           <Switch>
             <Routes />
           </Switch>
