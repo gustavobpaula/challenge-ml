@@ -21,7 +21,7 @@ cd server
 Install dependencies
 
 ```
-npm i
+yarn
 ```
 
 <br />
@@ -29,7 +29,7 @@ npm i
 Init the server in development mode
 
 ```
-npm run dev
+yarn dev
 ```
 
 ---
