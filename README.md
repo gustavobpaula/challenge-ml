@@ -1,3 +1,16 @@
+# Mercado Livre Search
+
+## Dependencies
+
+- Node.js
+- yarn
+
+<br />
+
+---
+
+<br />
+
 ## Configuration
 
 Create the `.env` file into `server` path and add the following properties
@@ -6,7 +19,11 @@ Create the `.env` file into `server` path and add the following properties
 PORT=7000
 ```
 
+<br />
+
 ---
+
+<br />
 
 ## How to run the server
 
@@ -32,9 +49,51 @@ Init the server in development mode
 yarn dev
 ```
 
+<br />
+
 ---
+
+<br />
+
+<br />
 
 ## Use API
 
 - **Search Products**: Open `http://localhost:7000/api/items?q={your_query}`
 - **Product Detail**: Open `http://localhost:7000/api/items/{product_id}`
+
+<br />
+
+<br />
+
+---
+
+<br />
+
+<br />
+
+## How run the client
+
+<br />
+
+Go to server path
+
+```
+cd client
+```
+
+<br />
+
+Install dependencies
+
+```
+yarn
+```
+
+<br />
+
+Run project
+
+```
+yarn start
+```
