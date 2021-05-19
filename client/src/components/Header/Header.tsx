@@ -10,7 +10,7 @@ function Header() {
       <Container>
         <S.Content>
           <Link to="/">
-            <img src={logo} />
+            <img src={logo} alt="logo mercado livre" />
           </Link>
           <Search />
         </S.Content>
