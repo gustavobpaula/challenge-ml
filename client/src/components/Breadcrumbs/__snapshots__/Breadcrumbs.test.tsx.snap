@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb component Should render match snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="css-6hghsz"
+  >
+    <ul
+      aria-label="breadcrumbs"
+      class="css-tw8vgv"
+    >
+      <li
+        class="css-ll50vx"
+      >
+        item 1
+      </li>
+      <li
+        class="css-ll50vx"
+      >
+        item 2
+      </li>
+      <li
+        class="css-ll50vx"
+      >
+        item 3
+      </li>
+    </ul>
+  </section>
+</DocumentFragment>
+`;

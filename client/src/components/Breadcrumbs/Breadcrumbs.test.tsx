@@ -20,6 +20,12 @@ const makeSut = () => {
 }
 
 describe('Breadcrumb component', () => {
+  it('Should render match snapshot', () => {
+    const { asFragment } = makeSut()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   it('Should render a list', () => {
     makeSut()
 
