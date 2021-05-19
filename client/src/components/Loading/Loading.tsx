@@ -5,7 +5,7 @@ function Loading() {
   return (
     <S.Container>
       <S.Content aria-label="Loading" aria-hidden="false" role="alert">
-        <S.Logo src={logo} alt="Logo do Guiabolso"></S.Logo>
+        <S.Logo src={logo} alt="Logo do Mercado Livre"></S.Logo>
         <S.FirstAnimation></S.FirstAnimation>
         <S.SecondAnimation></S.SecondAnimation>
         <S.ThirdAnimation></S.ThirdAnimation>
