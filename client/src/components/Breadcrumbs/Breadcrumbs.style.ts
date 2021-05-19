@@ -1,3 +1,4 @@
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 
 export const Content = styled.div`
@@ -15,16 +16,27 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   color: ${({ theme }) => theme.colors.gray3};
+  display: none;
   font-size: ${({ theme }) => theme.type.sizes.xs};
 
-  &::before {
-    content: '>';
-    margin: 0 5px;
+  &:last-of-type {
+    display: inline-block;
   }
 
-  &:first-child {
-    &::before {
-      display: none;
+  ${({ theme }) => css`
+    @media (min-width: ${theme.breakpoints.forDesktopUp}) {
+      display: inline-block;
+
+      &::before {
+        content: '>';
+        margin: 0 5px;
+      }
+
+      &:first-of-type {
+        &::before {
+          display: none;
+        }
+      }
     }
-  }
+  `}
 `

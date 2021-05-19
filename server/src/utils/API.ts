@@ -17,11 +17,12 @@ const API = {
   },
 
   /**
-   * Return items by query
+   * Return items by query (limit 4)
    */
   search: async (query: string) => {
     const params = new URLSearchParams()
     params.append('q', query)
+    params.append('limit', '4')
 
     try {
       const response = await fetch(

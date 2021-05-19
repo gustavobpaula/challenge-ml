@@ -1,9 +1,7 @@
 import { useStore } from 'hooks'
 
 export const useBreadcrumbs = () => {
-  const { searchResult } = useStore(state => state)
-
-  const breadcrumbs = searchResult?.categories || []
+  const { breadcrumbs } = useStore(state => state)
 
   return { breadcrumbs }
 }

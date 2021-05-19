@@ -92,6 +92,7 @@ export class Items implements ItemsModel {
           picture: result.thumbnail,
           condition: result.condition,
           free_shipping: result.shipping?.free_shipping,
+          state: result.address?.state_name,
         }
 
         return item

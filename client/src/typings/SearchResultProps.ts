@@ -16,6 +16,7 @@ export type ItemProps = {
   free_shipping: boolean
   sold_quantity?: number
   description?: string
+  state?: string
 }
 
 export type SearchResultProps = {

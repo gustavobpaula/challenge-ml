@@ -21,6 +21,7 @@ export type ItemProps = {
   picture: string
   condition: string
   free_shipping: boolean
+  state?: string
   sold_quantity?: number
   description?: string
 }

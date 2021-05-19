@@ -19,6 +19,9 @@ export type APIItemPayloadProps = {
 
 export type APIResultProps = APIItemPayloadProps & {
   currency_id: string
+  address: {
+    state_name: string
+  }
 }
 
 export type APISearchPayloadProps = {

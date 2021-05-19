@@ -17,6 +17,10 @@ const GlobalStyles = () => {
           -moz-osx-font-smoothing: grayscale;
           margin: 0;
         }
+
+        a {
+          text-decoration: none;
+        }
       `}
     />
   )
