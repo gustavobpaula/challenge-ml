@@ -4,7 +4,7 @@ import truck from 'assets/ic_shipping.png'
 
 import * as S from './ShelfItem.style'
 
-type ShelfItemProps = {
+export type ShelfItemProps = {
   item: ItemProps
 }
 

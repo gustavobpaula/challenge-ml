@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShelfItem component Should render match snapshot 1`] = `
+<DocumentFragment>
+  <article
+    class="css-ov1ktg"
+  >
+    <a
+      href="/items/MLA916188006"
+    >
+      <figure
+        class="css-qy8l6h"
+      >
+        <img
+          alt="iPod Touch 32gb - Blue"
+          loading="lazy"
+          src="http://http2.mlstatic.com/D_961656-MLA45566819084_042021-O.jpg"
+        />
+      </figure>
+    </a>
+    <div
+      class="css-1gen4p5"
+    >
+      <div
+        class="css-1hulj7l"
+      >
+        <a
+          href="/items/MLA916188006"
+        >
+          <h3
+            class="css-1a9qawe"
+          >
+            $ 39.999
+          </h3>
+        </a>
+        <img
+          alt="free shipping"
+          class="css-ci461p"
+          src="ic_shipping.png"
+        />
+      </div>
+      <a
+        href="/items/MLA916188006"
+      >
+        <h2
+          class="css-vv2ccr"
+        >
+          iPod Touch 32gb - Blue
+        </h2>
+      </a>
+    </div>
+    <p
+      class="css-1nktgjh"
+    >
+      Capital Federal
+    </p>
+  </article>
+</DocumentFragment>
+`;
