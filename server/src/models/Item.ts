@@ -92,6 +92,7 @@ export class Item implements ItemModel {
       picture: this.payloadItem.thumbnail,
       condition: this.payloadItem.condition,
       free_shipping: this.payloadItem.shipping.free_shipping,
+      sold_quantity: this.payloadItem.sold_quantity,
       description: this.payloadItemDescription.plain_text,
     }
   }

@@ -24,3 +24,8 @@ export type SearchResultProps = {
   categories: string[]
   items: ItemProps[]
 }
+
+export type ProductProps = {
+  author: AuthorProps
+  item: ItemProps
+}

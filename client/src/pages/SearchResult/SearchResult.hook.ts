@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useStore } from 'hooks'
-import { SearchResultProps } from 'typings/SearchResultProps'
+import { SearchResultProps } from 'typings/APIProps'
 
 export const useSearchResult = () => {
   const { search } = useLocation()
@@ -13,7 +13,6 @@ export const useSearchResult = () => {
     useState<SearchResultProps | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
-  // setIsLoading(true)
   const fetchData = () => {
     fetch(`${API_HOST}/api/items/${search}`)
       .then(response => response.json())

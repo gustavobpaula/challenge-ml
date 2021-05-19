@@ -6,10 +6,7 @@ function Search() {
   const { items, resultIsEmpty } = useSearchResult()
   return (
     <Template>
-      <div>
-        {resultIsEmpty ? <EmptyResult /> : <Shelf items={items} />}
-        <Shelf items={items} />
-      </div>
+      {resultIsEmpty ? <EmptyResult /> : <Shelf items={items} />}
     </Template>
   )
 }

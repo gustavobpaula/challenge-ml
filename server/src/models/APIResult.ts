@@ -12,6 +12,7 @@ export type APIItemPayloadProps = {
   price: number
   thumbnail: string
   condition: string
+  sold_quantity: number
   shipping: {
     free_shipping: boolean
   }

@@ -22,7 +22,8 @@ const theme = {
       md: '18px',
       lg: '24px',
       xl: '26px',
-      xxl: '46px',
+      xxl: '28px',
+      xxxl: '46px',
     },
   },
   breakpoints: {

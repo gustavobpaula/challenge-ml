@@ -1,7 +1,7 @@
 import { memo } from 'react'
 
 import { ShelfItem } from 'components'
-import { ItemProps } from 'typings/SearchResultProps'
+import { ItemProps } from 'typings/APIProps'
 
 import * as S from './Shelf.style'
 

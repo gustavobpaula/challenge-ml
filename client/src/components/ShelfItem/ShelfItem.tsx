@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ItemProps } from 'typings/SearchResultProps'
+import { ItemProps } from 'typings/APIProps'
 import truck from 'assets/ic_shipping.png'
 
 import * as S from './ShelfItem.style'
