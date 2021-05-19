@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component Should render match snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="css-o9qfam"
+  >
+    <input
+      aria-label="campo de búsqueda"
+      class="css-3300kj"
+      name="query"
+      placeholder="Nunca dejes de buscar"
+      type="text"
+      value=""
+    />
+    <button
+      class="css-1k0obmh"
+      type="submit"
+    >
+      <img
+        alt="Buscar"
+        src="ic_Search.png"
+      />
+    </button>
+  </form>
+</DocumentFragment>
+`;

@@ -15,6 +15,12 @@ const makeSut = () => {
 }
 
 describe('Search component', () => {
+  it('Should render match snapshot', () => {
+    const { asFragment } = makeSut()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   it('Should render a input', () => {
     makeSut()
 
