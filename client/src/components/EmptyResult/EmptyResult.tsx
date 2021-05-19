@@ -4,7 +4,7 @@ function EmptyResult() {
   return (
     <S.Content>
       <S.Title>No hay publicaciones que coincidan con tu búsqueda.</S.Title>
-      <ul>
+      <ul aria-label="todo list">
         <S.ToDo>
           <strong>Revisá la ortografía</strong> de la palabra.
         </S.ToDo>
