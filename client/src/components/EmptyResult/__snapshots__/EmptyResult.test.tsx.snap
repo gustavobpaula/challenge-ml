@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb component Should render match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-12128pa"
+  >
+    <h1
+      class="css-1fe6w8t"
+    >
+      No hay publicaciones que coincidan con tu búsqueda.
+    </h1>
+    <ul
+      aria-label="todo list"
+    >
+      <li
+        class="css-uv3dt8"
+      >
+        <strong>
+          Revisá la ortografía
+        </strong>
+         de la palabra.
+      </li>
+      <li
+        class="css-uv3dt8"
+      >
+        Utilizá 
+        <strong>
+          palabras más genéricas
+        </strong>
+         o menos palabras.
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
