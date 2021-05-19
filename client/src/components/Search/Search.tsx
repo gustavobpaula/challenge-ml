@@ -14,6 +14,7 @@ function Search() {
         placeholder="Nunca dejes de buscar"
         value={inputValue}
         onChange={handleChange}
+        aria-label="campo de búsqueda"
       />
       <S.Button type="submit">
         <img src={iconSearch} alt="Buscar" />
