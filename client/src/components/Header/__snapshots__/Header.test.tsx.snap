@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb component Should render match snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="css-eid55s"
+  >
+    <section
+      class="css-6hghsz"
+    >
+      <div
+        class="css-1vo4ybp"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="logo mercado livre"
+            src="Logo_ML.png"
+          />
+        </a>
+        <form
+          class="css-o9qfam"
+        >
+          <input
+            aria-label="campo de búsqueda"
+            class="css-3300kj"
+            name="query"
+            placeholder="Nunca dejes de buscar"
+            type="text"
+            value=""
+          />
+          <button
+            class="css-1k0obmh"
+            type="submit"
+          >
+            <img
+              alt="Buscar"
+              src="ic_Search.png"
+            />
+          </button>
+        </form>
+      </div>
+    </section>
+  </header>
+</DocumentFragment>
+`;
