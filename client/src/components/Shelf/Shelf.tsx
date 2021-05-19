@@ -11,7 +11,7 @@ type ShelfProps = {
 
 function Shelf({ items }: ShelfProps) {
   return (
-    <S.ShelfList>
+    <S.ShelfList aria-label="Shelf">
       {items?.map(item => {
         return (
           <S.ShelfListItem key={item.id}>

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shelf component Should render match snapshot 1`] = `
+<DocumentFragment>
+  <ul
+    aria-label="Shelf"
+    class="css-1f5equ3"
+  />
+</DocumentFragment>
+`;
