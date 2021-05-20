@@ -1,5 +1,8 @@
 # Mercado Livre Search
 
+- [APP Hosted on Vercel](https://gustavo-challenge-ml.vercel.app/)
+- [API Hosted on Heroku](https://gustavo-ml.herokuapp.com/api/items/?q=query)
+
 ## Dependencies
 
 - Node.js
