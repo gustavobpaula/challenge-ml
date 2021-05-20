@@ -2,11 +2,11 @@
   "name": "challenge-ml",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/server.js",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules src/server.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules src/index.ts",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
-    "start": "node dist/server.js"
+    "start": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
