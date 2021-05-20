@@ -3,11 +3,12 @@ import { useEffect } from 'react'
 import { Default as Template } from 'templates'
 
 function Home() {
-  const { setBreadcrumbs } = useStore()
+  const { setBreadcrumbs, setQuery } = useStore()
 
   useEffect(() => {
+    setQuery('')
     setBreadcrumbs([])
-  }, [setBreadcrumbs])
+  }, [setBreadcrumbs, setQuery])
 
   return <Template />
 }
