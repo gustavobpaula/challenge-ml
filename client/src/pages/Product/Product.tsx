@@ -5,9 +5,9 @@ import { useProduct } from './Product.hook'
 import * as S from './Product.style'
 
 function Product() {
-  const { notFound, product, isLoading } = useProduct()
+  const { notFound, product, isLoading, error } = useProduct()
 
-  if (notFound) {
+  if (notFound || error) {
     return (
       <Template>
         <EmptyResult />

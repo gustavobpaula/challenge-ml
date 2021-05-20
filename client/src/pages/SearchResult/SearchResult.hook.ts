@@ -12,6 +12,7 @@ export const useSearchResult = () => {
   const [searchResult, setSearchResult] =
     useState<SearchResultProps | null>(null)
   const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState()
 
   const fetchData = () => {
     fetch(`${API_HOST}/api/items/${search}`)
@@ -20,6 +21,9 @@ export const useSearchResult = () => {
         setSearchResult(payload)
         setBreadcrumbs(payload?.categories || [])
         setIsLoading(false)
+      })
+      .catch(e => {
+        setError(e)
       })
   }
 
@@ -36,6 +40,7 @@ export const useSearchResult = () => {
   }, [urlQuery, query, setQuery])
 
   return {
+    error,
     items: searchResult?.items,
     isLoading,
     resultIsEmpty:

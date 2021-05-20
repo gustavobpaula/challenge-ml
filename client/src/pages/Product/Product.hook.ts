@@ -9,6 +9,7 @@ export const useProduct = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [product, setProduct] = useState<ProductProps | null>(null)
   const [notFound, setNotFound] = useState(false)
+  const [error, setError] = useState()
 
   const fetchData = () => {
     fetch(`${API_HOST}/api/items/${id}`)
@@ -22,11 +23,14 @@ export const useProduct = () => {
         setNotFound(false)
         setProduct(payload)
       })
+      .catch(e => {
+        setError(e)
+      })
   }
 
   useEffect(() => {
     fetchData()
   }, [])
 
-  return { product: product?.item, isLoading, notFound }
+  return { product: product?.item, isLoading, notFound, error }
 }
